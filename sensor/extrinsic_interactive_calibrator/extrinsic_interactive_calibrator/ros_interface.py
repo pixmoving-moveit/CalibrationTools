@@ -282,7 +282,7 @@ class RosInterface(Node):
             )
 
             self.output_transform_msg = transform_matrix_to_tf_message(
-                np.linalg.inv(camera_camera_parent_transform)
+                camera_camera_parent_transform
             )
             self.output_transform_msg.header.frame_id = self.camera_parent_frame
             self.output_transform_msg.child_frame_id = self.camera_frame
