@@ -278,9 +278,7 @@ class RosInterface(Node):
                 return
 
             camera_camera_parent_transform = (
-                np.linalg.inv(optical_axis_to_camera_transform)
-                @ camera_optical_lidar_transform
-                @ np.linalg.inv(camera_parent_lidar_transform)
+                np.linalg.inv(camera_optical_lidar_transform)
             )
 
             self.output_transform_msg = transform_matrix_to_tf_message(
